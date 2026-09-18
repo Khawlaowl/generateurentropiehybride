@@ -1,23 +1,4 @@
-"""
-main.py
-=======
-Orchestre le "Quantum-Enhanced Entropy Pipeline for Corporate VPN/SSH" :
 
-  QRNG simulé (Qiskit, H + mesure)
-        │
-        ▼
-  HKDF-SHA512(IKM=bits quantiques, salt=os.urandom)   <- durcissement
-        │
-        ├──► seed 32o ──► clé SSH Ed25519
-        ├──► seed 32o ──► clé VPN X25519
-        └──► seed 64o ──► DRBG HMAC-SHA512 ──► p, q ──► clé RSA-2048
-                                                              │
-                                                              ▼
-                                            certificat X.509 auto-signé
-
-Usage :
-    python3 main.py
-"""
 import os
 import sys
 import math
