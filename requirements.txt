@@ -1,0 +1,5 @@
+qiskit>=1.0
+cryptography>=42
+sympy>=1.12
+matplotlib>=3.7
+pylatexenc>=2.10
