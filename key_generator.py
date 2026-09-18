@@ -1,16 +1,4 @@
-"""
-key_generator.py
-=================
-Étape 3 de l'architecture : l'Application Cyber Concrète.
 
-Consomme l'entropie produite par le pipeline hybride (qrng_source +
-entropy_extractor) pour fabriquer :
-  - une paire de clés SSH Ed25519 (serveur SSH),
-  - une paire de clés X25519 (échange de clés VPN type WireGuard),
-  - une paire de clés RSA-2048 dont les nombres premiers p, q sont
-    tirés via un DRBG (drbg.py) réamorcé avec l'entropie hybride,
-  - un certificat X.509 auto-signé (HTTPS/VPN) pour l'une de ces clés.
-"""
 import datetime
 
 from cryptography import x509
