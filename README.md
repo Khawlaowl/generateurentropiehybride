@@ -1,4 +1,4 @@
-##🔐 Projet perso : un générateur d'entropie hybride pour sécuriser des infrastructures SSH/VPN
+🔐 Projet perso : un générateur d'entropie hybride pour sécuriser des infrastructures SSH/VPN
 
 La faille la plus sous-estimée en cybersécurité n'est souvent pas l'algorithme de chiffrement lui-même, mais la qualité de l'aléa utilisé pour générer les clés. Un générateur prévisible = une porte dérobée gratuite pour un attaquant.
 
