@@ -1,14 +1,4 @@
-"""
-visualize_circuit.py
-=====================
-Visualise le circuit H + mesure du QRNG en LOCAL, sans compte IBM Quantum,
-sans instance, sans connexion internet. Équivalent des panneaux du
-Composer (schéma, Q-sphere/Bloch, histogramme de probabilités).
 
-Usage :
-    pip install qiskit matplotlib pylatexenc
-    python3 visualize_circuit.py
-"""
 from qiskit import QuantumCircuit, transpile
 from qiskit.providers.basic_provider import BasicSimulator
 from qiskit.quantum_info import Statevector
