@@ -1,33 +1,4 @@
-"""
-qrng_source.py
-==============
-Étape 1 de l'architecture : la Source Quantique.
 
-Génère une chaîne de bits en simulant un circuit quantique où chaque
-qubit est placé en état de superposition maximale via une porte de
-Hadamard (H), puis mesuré. D'après la règle de Born, la mesure d'un
-qubit dans l'état |+> = (|0> + |1>)/sqrt(2) donne 0 ou 1 avec une
-probabilité de 50 % chacun, indépendamment des autres qubits.
-
-Deux backends :
-  - "qiskit"   : utilise réellement Qiskit (BasicSimulator, fourni avec
-                 qiskit-terra, sans dépendance à qiskit-aer) pour
-                 construire et exécuter le circuit H + mesure.
-  - "fallback" : utilisé automatiquement si Qiskit n'est pas installé
-                 dans l'environnement d'exécution (ex. ce sandbox, qui
-                 n'a pas d'accès réseau pour l'installer). Reproduit la
-                 même loi de probabilité (Bernoulli(0.5) i.i.d.) mais en
-                 tirant l'aléa depuis os.urandom (CSPRNG du noyau) au
-                 lieu d'un véritable simulateur d'état quantique. Ce
-                 mode est CLAIREMENT moins "quantique" et sert avant
-                 tout à ce que le pipeline reste exécutable partout ;
-                 sur votre machine avec `pip install qiskit`, le mode
-                 "qiskit" sera utilisé automatiquement.
-
-Dans les deux cas, rappelons que ceci reste un SIMULATEUR classique
-(votre CPU), pas du matériel quantique physique — d'où l'étape 2
-(entropy_extractor.py) qui mélange ce flux avec du bruit OS réel.
-"""
 import os
 import math
 
